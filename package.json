@@ -4,9 +4,13 @@
   "description": "MCP bridge for Chrome DevTools Protocol - debug AI agents in browser",
   "main": "dist/index.js",
   "type": "module",
+  "bin": {
+    "chrome-devtools-mcp": "./dist/index.js"
+  },
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "vitest"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0",
@@ -14,6 +18,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
   }
 }
